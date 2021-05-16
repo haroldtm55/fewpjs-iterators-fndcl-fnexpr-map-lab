@@ -11,6 +11,22 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+function toArray(string) {
+  //Converts a given string into an array
+  return string.split(' ')
+}
+
+function capitaliseFirstElement(array) {
+  //Converts the first element of an array to UPPERCASE and adds the rest of the elements as the originals
+  return array[0].toUpperCase() + array.slice(1)
+}
+
 const titleCased = () => {
-  return tutorials
+  //Create an array that contains each string element into a sub-array
+  let tutorialsArrays = tutorials.map(toArray)
+  const anotherArray = []
+  for (let i=0; i<= tutorialsArrays.length - 1; i++) {
+    anotherArray.push(tutorialsArrays[i].map(capitaliseFirstElement).join(' '))
+  }
+  return anotherArray
 }
