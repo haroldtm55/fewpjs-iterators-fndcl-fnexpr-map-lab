@@ -24,7 +24,11 @@ function capitaliseFirstElement(array) {
 const titleCased = () => {
   //Create an array that contains each string element into a sub-array
   let tutorialsArrays = tutorials.map(toArray)
+  
+  //Create an array that will contain the strings with uppercased first letters
   const finalArray = []
+  
+  //Loop over the sub-arrays, capitalises first letters with .map method and converts back to string with .join method
   for (let i=0; i<= tutorialsArrays.length - 1; i++) {
     finalArray.push(tutorialsArrays[i].map(capitaliseFirstElement).join(' '))
   }
