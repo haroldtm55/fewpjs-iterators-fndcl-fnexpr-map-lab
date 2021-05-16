@@ -24,9 +24,9 @@ function capitaliseFirstElement(array) {
 const titleCased = () => {
   //Create an array that contains each string element into a sub-array
   let tutorialsArrays = tutorials.map(toArray)
-  const anotherArray = []
+  const finalArray = []
   for (let i=0; i<= tutorialsArrays.length - 1; i++) {
-    anotherArray.push(tutorialsArrays[i].map(capitaliseFirstElement).join(' '))
+    finalArray.push(tutorialsArrays[i].map(capitaliseFirstElement).join(' '))
   }
-  return anotherArray
+  return finalArray
 }
